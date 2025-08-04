@@ -1,17 +1,10 @@
-library(lintr)
-
-lilly_linters <- 
-  list(
-    # Naming Objects
+linters: list(
     object_name = object_name_linter(styles = c("snake_case",  # most objects
                                                 "SNAKE_CASE",  # constants
                                                 "UPPERCASE",   # constants
                                                 "camelCase",   # functions
                                                 "CamelCase")), # data.frames
     object_length = object_length_linter(length = 32L),
-    
-    
-    # Code Style Appearance
     assignment = assignment_linter(), 
     braces = brace_linter(),
     commas = commas_linter(), 
@@ -29,31 +22,23 @@ lilly_linters <-
     todo_comment = todo_comment_linter(), 
     trailing_blank_lines = trailing_blank_lines_linter(),
     whitespace = whitespace_linter(), 
-    
-    
-    # Use of Pipes
     pipe_call = pipe_call_linter(), 
     pipe_consistency = pipe_consistency_linter(), 
     pipe_continuation = pipe_continuation_linter(),
-    
-    
-    # Avoiding environment pollution
     undesirable_function = 
       undesirable_function_linter(
-        fun = all_undesirable_functions[c("attach", 
-                                          "browser", 
-                                          "debug",
-                                          "debugcall", 
-                                          "debugonce", 
-                                          "detach", 
-                                          "par", 
-                                          "setwd", 
-                                          "sink", 
-                                          "trace", 
-                                          "undebug", 
-                                          "untrace")]),
-    
-    # Avoiding Common Inefficiencies
+      fun = all_undesirable_functions[c("attach", 
+                                        "browser", 
+                                        "debug",
+                                        "debugcall", 
+                                        "debugonce", 
+                                        "detach", 
+                                        "par", 
+                                        "setwd", 
+                                        "sink", 
+                                        "trace", 
+                                        "undebug", 
+                                        "untrace")]),
     boolean = boolean_arithmetic_linter(),
     class_equals = class_equals_linter(),
     duplicate_argument = duplicate_argument_linter(), 
@@ -66,25 +51,16 @@ lilly_linters <-
     seq = seq_linter(),
     sort = sort_linter(),
     vector_logic = vector_logic_linter(),
-    
-    
-    # Efficient Coding Practice
     any_duplicated = any_duplicated_linter(), 
     any_na = any_is_na_linter(), 
     empty_assignment = empty_assignment_linter(), 
     implicit_assignment = implicit_assignment_linter(), 
     outer_negation = outer_negation_linter(), 
-    
-    
-    # String handling
     condition = condition_message_linter(), 
     paste = paste_linter(), 
     regex_subset = regex_subset_linter(), 
     sprintf = sprintf_linter(),
     string_boundary = string_boundary_linter(),
-    
-    
-    # Functions and Flow Control
     for_loop_index = for_loop_index_linter(), 
     function_return = function_return_linter(), 
     if_not_else = if_not_else_linter(), 
@@ -95,8 +71,6 @@ lilly_linters <-
     repeat_lint = repeat_linter(), 
     unnecessary_nested_if = unnecessary_nested_if_linter(), 
     unreachable_code = unreachable_code_linter(), 
-    
-    # Miscellaneous Code Issues
     keyword_quote = keyword_quote_linter(), 
     missing_argument = missing_argument_linter(), 
     nonportable_path = nonportable_path_linter(), 
@@ -105,3 +79,4 @@ lilly_linters <-
     unnecessary_concatenation = unnecessary_concatenation_linter(), 
     unnecessary_lambda = unnecessary_lambda_linter() 
   )
+
