@@ -95,9 +95,9 @@ _Recommendation:_ Functions should be named as either a verb or an action statem
 
 _Rationale:_ Functions are another class of object that are important to recognize quickly. This form of camel case makes them readily distinguishable from both common objects and data frames. 
 
-<font color = "purple">Note, this recommendation is not found in any of the common style guides and could be somewhat controversial. The recommendation in most popular style guides is that functions should be named in snake case. I'm open to adopting this standard, but I do find it useful to be able to distinguish functions from other objects. 
+**Note, this recommendation is not found in any of the common style guides and could be somewhat controversial. The recommendation in most popular style guides is that functions should be named in snake case. I'm open to adopting this standard, but I do find it useful to be able to distinguish functions from other objects. 
 
-However, there is no universally agreed upon standard in the R community and developers are likely to encounter function names of many different styles in distributed R packages. It would be impossible to adopt any standard that will not find a conflict with some other community developed package. However we choose to name functions may as well reflect the preferences of our team</font>
+However, there is no universally agreed upon standard in the R community and developers are likely to encounter function names of many different styles in distributed R packages. It would be impossible to adopt any standard that will not find a conflict with some other community developed package. However we choose to name functions may as well reflect the preferences of our team**
 
 ```
 # Good examples -----------------------------------------------------
@@ -358,7 +358,7 @@ _Exception:_ In the global environment, no line may begin with `else`. For consi
 
 _Rationale:_ This is ubiquitous in the R community
 
-<font color = "purple">While this is ubiquitous in the R community, no other sensible programming language does this. I'm not opposed to switching to putting the braces on their own line. </font>
+**While this is ubiquitous in the R community, no other sensible programming language does this. I'm not opposed to switching to putting the braces on their own line. (But there isn't an established linter for this and we would need to write our own)**
 
 ```
 # Good example ------------------------------------------------------
