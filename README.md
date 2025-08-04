@@ -26,7 +26,7 @@ identifying when it may be beneficial to deviate from the recommendation.
 ## Using `lintr`
 
 The easiest way to use `lintr` to check for code styling is to copy the 
-`.lintr` file [https://raw.githubusercontent.com/bnutter-lilly/RStyleGuide/refs/heads/main/.lintr](from the Style Guide Repository) 
+`.lintr` file [from the Style Guide Repository](https://raw.githubusercontent.com/bnutter-lilly/RStyleGuide/refs/heads/main/.lintr) 
 into your project's home directory. After copying the file, you may run 
 the following to check either a directory or a file.
 
@@ -43,7 +43,7 @@ lint_dir(".")
 lint_dir("path/to/directory")
 ```
 
-Alternatively, you may run the code in [https://github.com/bnutter-lilly/RStyleGuide/blob/main/LillyLinter.R](`LillyLinter.R`)
+Alternatively, you may run the code in [`LillyLinter.R`](https://github.com/bnutter-lilly/RStyleGuide/blob/main/LillyLinter.R)
 to define the set of linters and run the following:
 
 ```
