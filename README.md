@@ -2,7 +2,14 @@
 
 ## Purpose 
 
-The purpose of this style guide is to encourage a more standardized appearance of code written in the R scripting language. The ultimate goal of this style guide is to assist in writing code that is both **readable** and **maintainable**. Emphasis is to be placed on the phrase _more standardized_, as no style guide can adequately capture the correct styling of every bit of code. The recommendations in this style guide should be followed when practicable, but developers are encouraged to think about how to best present code that satisfies the conditions of readability and maintainability. 
+The purpose of this style guide is to encourage a more standardized appearance 
+of code written in the R scripting language. The ultimate goal of this style 
+guide is to assist in writing code that is both **readable** and 
+**maintainable**. Emphasis is to be placed on the phrase _more standardized_, 
+as no style guide can adequately capture the correct styling of every bit 
+of code. The recommendations in this style guide should be followed when 
+practical, but developers are encouraged to think about how to best present 
+code that satisfies the conditions of readability and maintainability. 
 
 Each recommendation in the style guide will consist of the parts
 
@@ -11,7 +18,47 @@ Each recommendation in the style guide will consist of the parts
 * Good examples
 * Bad examples
 
-The rationale for the recommendation acknowledges that style guides are inherently opinionated, sometimes strongly so. Providing the rationale assists the developer in understanding the intended goal of the recommendation and identifying when it may be beneficial to deviate from the recommendation. 
+The rationale for the recommendation acknowledges that style guides are 
+inherently opinionated, sometimes strongly so. Providing the rationale assists 
+the developer in understanding the intended goal of the recommendation and 
+identifying when it may be beneficial to deviate from the recommendation. 
+
+## Using `lintr`
+
+The easiest way to use `lintr` to check for code styling is to copy the 
+`.lintr` file [https://raw.githubusercontent.com/bnutter-lilly/RStyleGuide/refs/heads/main/.lintr](from the Style Guide Repository) 
+into your project's home directory. After copying the file, you may run 
+the following to check either a directory or a file.
+
+```
+library(lintr)
+
+# Check a single file
+lint("path/to/file.R")
+
+# Check all files in the project
+lint_dir(".")
+
+# Check all the files in a subdirectory
+lint_dir("path/to/directory")
+```
+
+Alternatively, you may run the code in [https://github.com/bnutter-lilly/RStyleGuide/blob/main/LillyLinter.R](`LillyLinter.R`)
+to define the set of linters and run the following:
+
+```
+# Check a single file
+lint("path/to/file.R", 
+     linters = lilly_linters)
+
+# Check all files in the project
+lint_dir(".", 
+         linters = lilly_linters)
+
+# Check all the files in a subdirectory
+lint_dir("path/to/directory", 
+         linters = lilly_linters)
+```
 
 ## Naming Objects and Functions
 
