@@ -95,9 +95,9 @@ _Recommendation:_ Functions should be named as either a verb or an action statem
 
 _Rationale:_ Functions are another class of object that are important to recognize quickly. This form of camel case makes them readily distinguishable from both common objects and data frames. 
 
-**Note, this recommendation is not found in any of the common style guides and could be somewhat controversial. The recommendation in most popular style guides is that functions should be named in snake case. I'm open to adopting this standard, but I do find it useful to be able to distinguish functions from other objects. 
+**Note, this recommendation is not found in any of the common style guides and could be somewhat controversial. The recommendation in most popular style guides is that functions should be named in snake case. I'm open to adopting this standard, but I do find it useful to be able to distinguish functions from other objects.**
 
-However, there is no universally agreed upon standard in the R community and developers are likely to encounter function names of many different styles in distributed R packages. It would be impossible to adopt any standard that will not find a conflict with some other community developed package. However we choose to name functions may as well reflect the preferences of our team**
+**However, there is no universally agreed upon standard in the R community and developers are likely to encounter function names of many different styles in distributed R packages. It would be impossible to adopt any standard that will not find a conflict with some other community developed package. However we choose to name functions may as well reflect the preferences of our team**
 
 ```
 # Good examples -----------------------------------------------------
@@ -404,9 +404,7 @@ _Recommendation:_ Use the `magrittr` pipe operator `%>%`. Start a new line after
 
 _Rationale:_ The native pipe operator is still relatively new. Using `%>%` permits for backward compatible code. 
 
-<font color = "purple">
-R has supported a native pipe for a couple of years now. I'm not opposed to adopting it as our standard. It could pose a risk to backward compatibility with older versions of R, but if we don't consider that a major risk in our work, then it's probably worthwhile to move onto the native pipe.
-</font>
+**R has supported a native pipe for a couple of years now. I'm not opposed to adopting it as our standard. It could pose a risk to backward compatibility with older versions of R, but if we don't consider that a major risk in our work, then it's probably worthwhile to move onto the native pipe.**
 
 ```
 # Good example ------------------------------------------------------
